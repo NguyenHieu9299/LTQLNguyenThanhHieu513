@@ -18,6 +18,6 @@ namespace LTQL_1721050513.Models
 
         public string TenNhaCungCap { get; set; }
 
-        
+        public ICollection<NTHSanPham513> Sanphams { get; set; }
     }
 }

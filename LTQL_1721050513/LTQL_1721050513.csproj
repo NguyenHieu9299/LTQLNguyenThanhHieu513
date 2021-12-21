@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -129,11 +129,23 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NhaCungCap513Controller.cs" />
+    <Compile Include="Controllers\NTHSanPham513Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112210718212_createtable.cs" />
+    <Compile Include="Migrations\202112210718212_createtable.Designer.cs">
+      <DependentUpon>202112210718212_createtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112210733567_createtable2.cs" />
+    <Compile Include="Migrations\202112210733567_createtable2.Designer.cs">
+      <DependentUpon>202112210733567_createtable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\LTQLDbContext.cs" />
     <Compile Include="Models\NhaCungCap513.cs" />
+    <Compile Include="Models\NTHSanPham513.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +184,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\NhaCungCap513\Create.cshtml" />
+    <Content Include="Views\NhaCungCap513\Delete.cshtml" />
+    <Content Include="Views\NhaCungCap513\Details.cshtml" />
+    <Content Include="Views\NhaCungCap513\Edit.cshtml" />
+    <Content Include="Views\NhaCungCap513\Index.cshtml" />
+    <Content Include="Views\NTHSanPham513\Create.cshtml" />
+    <Content Include="Views\NTHSanPham513\Delete.cshtml" />
+    <Content Include="Views\NTHSanPham513\Details.cshtml" />
+    <Content Include="Views\NTHSanPham513\Edit.cshtml" />
+    <Content Include="Views\NTHSanPham513\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -188,6 +210,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202112210718212_createtable.resx">
+      <DependentUpon>202112210718212_createtable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112210733567_createtable2.resx">
+      <DependentUpon>202112210733567_createtable2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
